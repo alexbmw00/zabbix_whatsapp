@@ -14,7 +14,7 @@ Notes:
 Tested in Rocky Linux 9, Zabbix 6, Jun/2024
 
 Usage:
-# ansible-playbook 01-setup.yml -i inventory -b
+# ansible-playbook  -i inventory playbook.yml
 
 After playbook completed, you need scan qrcode, first start ssh \
 connection, and running commands:
