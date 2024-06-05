@@ -1,4 +1,4 @@
-# Original Project Developed by:
+# Original Project by:
 # - Developed by: Bee Solutions
 # - Author: Fernando Almondes
 
