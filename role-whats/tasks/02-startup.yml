@@ -1,0 +1,7 @@
+---
+- name: Npm startup enable
+  shell: "{{ item }}"
+  loop: "{{ post_build }}"
+  ignore_errors: True
+  args:
+    chdir: "{{ dest_nodes }}"

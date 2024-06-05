@@ -1,8 +1,12 @@
-# Original Developed by:
+# Original Project Developed by:
 # - Developed by: Bee Solutions
 # - Author: Fernando Almondes
 
-# Automation with Ansible Original playbook by:
+References:
+https://github.com/pedroslopez/whatsapp-web.js.git
+https://github.com/T3uZ/whatsapp-web.js.git
+
+# Automation with Ansible, Original playbook by:
 # - Author: Alex Clemente
 # - https://www.linkedin.com/in/linux-expertise
 
@@ -47,6 +51,3 @@ List of group IDs and names: [
 3º
 pm2 start 0
 
-References:
-https://github.com/pedroslopez/whatsapp-web.js.git
-https://github.com/T3uZ/whatsapp-web.js.git

@@ -1,0 +1,48 @@
+---
+# define packages
+packages:
+  - npm
+  - git
+  - curl
+
+# define npm commands
+npm:
+  - /usr/local/bin/npm install -g n
+  - /usr/local/bin/n stable
+  - /usr/local/bin/npm install -g pm2
+  - /usr/local/bin/npm init -y
+  - /usr/local/bin/npm install express
+  - /usr/local/bin/npm install qrcode-terminal
+  - /usr/local/bin/npm install moment-timezone
+  - /usr/local/bin/npm install multer
+  - /usr/local/bin/npm uninstall whatsapp-web.js
+  - /usr/local/bin/npm install git+https://github.com/T3uZ/whatsapp-web.js.git
+
+# define files .js
+src_file: Constants.js
+dest_file: /opt/beezap/node_modules/whatsapp-web.js/src/util/Constants.js
+
+# define alert scripts
+src_scripts: beezap2.sh
+dest_scripts: /usr/lib/zabbix/alertscripts/
+
+# define nodejs files
+node_files:
+  - beeid2.js
+  - beezap2.js
+  - index.js
+
+# define npm directory project
+dest_nodes: /opt/beezap
+
+# define permissions
+owner: zabbix
+group: "{{ owner }}"
+mode: 0754
+
+# define pm2 command to enable node app - post reboot
+post_build:
+  - /usr/local/bin/pm2 start beezap2.js
+  - /usr/local/bin/pm2 startup
+  - /usr/local/bin/pm2 save
+# end

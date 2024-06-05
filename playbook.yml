@@ -1,0 +1,6 @@
+---
+- name: Setup npm to zabbix whatsapp integration
+  hosts: all
+  roles:
+    - role-whats
+
