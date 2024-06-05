@@ -1,0 +1,12 @@
+---
+- name: Enable node app
+  hosts: all
+  vars_files:
+    - vars/vars.yml
+  tasks:
+    - name: Npm startup enable
+      shell: "{{ item }}"
+      loop: "{{ post_build }}"
+      ignore_errors: True
+      args:
+        chdir: "{{ dest_nodes }}"
